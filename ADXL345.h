@@ -9,15 +9,15 @@ Updated by Jan Balewski, August 2014
 
 #ifndef ADXL345_HH
 #define ADXL345_HH
-#include <stdio.h>
-#include <stdlib.h>
-#include <linux/i2c-dev.h>
-#include <fcntl.h>
-#include <string.h>
-#include <sys/ioctl.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include <stdio>
+#include <stdlib>
+#include <linux/i2c-dev>
+#include <fcntl>
+#include <string>
+#include <sys/ioctl>
+#include <sys/types>
+#include <sys/stat>
+#include <unistd>
 #include <iostream>
 
 
