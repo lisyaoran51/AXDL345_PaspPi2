@@ -71,11 +71,17 @@ int main(int argc, char **argv){
   }
   usleep(100*1000);
 
-  
-  FILE *f = fopen("file.txt", "w+");
+  char TimeString[128];
+
+	timeval curTime;
+	gettimeofday(&curTime, NULL);
+	
+	strftime(TimeString, 80, "Record%m%d_%H_%M.txt", localtime(&curTime.tv_sec));
+	 printf(TimeString);
+  FILE *f = fopen(TimeString, "w+");
 	if (f == NULL)
 	{
-		f = fopen("file.txt", "w+");
+		f = fopen(TimeString, "w+");
 		if (f == NULL)
 		{
 			printf("Error opening file!\n");
@@ -93,16 +99,11 @@ int main(int argc, char **argv){
      float a=sqrt(aa);
      printf("k=%3d  acceleration (a.u.)  mag=%.1f    ax,ay,az=%d, %d, %d\n",k,a,ax,ay,az);
 
-     usleep(500*1000);   
+     usleep(1000*1000);   
 	 
-	 char TimeString[128];
-
-	timeval curTime;
-	gettimeofday(&curTime, NULL);
-	
-	strftime(TimeString, 80, "Record%m%d_%H_%M.txt", localtime(&curTime.tv_sec));
-	 printf(TimeString);
 	 
+	 fprintf(fp, "%d,%d,%d,%d\n", k, ax, ay, az);
+	 fflush(stdout);
    }
 
    return 0;
