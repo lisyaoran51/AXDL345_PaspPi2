@@ -6,7 +6,7 @@ Compile with;
 
 git pull origin
 
-gcc -o main -l rt main.c ADXL345.cpp -lm -lwiringPi
+gcc -o main -l rt ADXL345.cpp main.cpp -lm -lwiringPi
 
 rpi accelerometer
 http://ozzmaker.com/guide-to-interfacing-a-gyro-and-accelerometer-with-a-raspberry-pi/
