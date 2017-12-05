@@ -21,3 +21,8 @@ ADXL345
 https://github.com/mcauser/Grove-3Axis-Digital-Accelerometer-16g-ADXL345
 
 normal: 235,113,31 mag:變動在5之內
+
+
+usb:
+/dev/sda1       8064 15130623 15122560  7.2G  c W95 FAT32 (LBA)
+ LABEL="USB DISK" UUID="EA60-6436" TYPE="vfat" PARTUUID="ea0dd879-01"

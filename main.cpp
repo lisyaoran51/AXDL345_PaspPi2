@@ -76,8 +76,9 @@ int main(int argc, char **argv){
 	timeval curTime;
 	gettimeofday(&curTime, NULL);
 	
-	strftime(TimeString, 80, "Record%m%d_%H_%M.txt", localtime(&curTime.tv_sec));
+	strftime(TimeString, 80, "/media/usbstick/Record%m%d_%H_%M.txt", localtime(&curTime.tv_sec));
 	 printf(TimeString);
+	 printf("\n");
   FILE *f = fopen(TimeString, "w+");
 	if (f == NULL)
 	{
