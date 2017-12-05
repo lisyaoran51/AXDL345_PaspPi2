@@ -17,5 +17,7 @@ https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3/blob/master/
 wire to wiringpi
 https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=53680
 
+ADXL345
+https://github.com/mcauser/Grove-3Axis-Digital-Accelerometer-16g-ADXL345
 
 normal: 235,113,31 mag:變動在5之內

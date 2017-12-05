@@ -103,7 +103,7 @@ int main(int argc, char **argv){
 	 
 	 
 	 fprintf(f, "%d,%d,%d,%d\n", k, ax, ay, az);
-	 fflush(stdout);
+	 fflush(f);
    }
 
    return 0;
