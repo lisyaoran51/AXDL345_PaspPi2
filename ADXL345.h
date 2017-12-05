@@ -11,7 +11,7 @@ Updated by Jan Balewski, August 2014
 #define ADXL345_HH
 #include <stdio.h>
 #include <stdlib.h>
-#include <linux/i2c-dev>
+#include <linux/i2c-dev.h>
 #include <fcntl.h>
 #include <string>
 #include <sys/ioctl.h>
