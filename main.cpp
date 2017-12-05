@@ -102,7 +102,7 @@ int main(int argc, char **argv){
      usleep(1000*1000);   
 	 
 	 
-	 fprintf(fp, "%d,%d,%d,%d\n", k, ax, ay, az);
+	 fprintf(f, "%d,%d,%d,%d\n", k, ax, ay, az);
 	 fflush(stdout);
    }
 
