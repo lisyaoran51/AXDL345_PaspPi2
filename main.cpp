@@ -43,9 +43,11 @@ k=  4  acceleration (a.u.)  mag=272.8    ax,ay,az=-42, 17, -269
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/time.h>
 #include <unistd.h>
 #include <iostream>
 #include <cmath>
+
 #include "ADXL345.h"
 using namespace std;
 
@@ -69,6 +71,19 @@ int main(int argc, char **argv){
   }
   usleep(100*1000);
 
+  
+  FILE *f = fopen("file.txt", "w+");
+	if (f == NULL)
+	{
+		f = fopen("file.txt", "w+");
+		if (f == NULL)
+		{
+			printf("Error opening file!\n");
+			return 0;
+		}
+	}
+  
+  
   int k=0;
   short ax,ay,az;
   while(myAcc.readXYZ(ax,ay,az)) {
@@ -79,6 +94,15 @@ int main(int argc, char **argv){
      printf("k=%3d  acceleration (a.u.)  mag=%.1f    ax,ay,az=%d, %d, %d\n",k,a,ax,ay,az);
 
      usleep(500*1000);   
+	 
+	 char TimeString[128];
+
+	timeval curTime;
+	gettimeofday(&curTime, NULL);
+	
+	strftime(TimeString, 80, "Record%m%d_%H_%M.txt", localtime(&curTime.tv_sec));
+	 printf(TimeString);
+	 
    }
 
    return 0;

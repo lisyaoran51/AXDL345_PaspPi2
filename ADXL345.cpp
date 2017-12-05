@@ -68,6 +68,7 @@ int ADXL345::init()  {
   
    buf[0] = 0x31;              // Commands for performing a ranging
    buf[1] = 0x0A; //09 4g , A 8g
+   buf[1] = 0x0B; //16g
    
    if(!writeToDevice(buf,2))  return -3;
    printf("ADXL345::init() OK\n");
