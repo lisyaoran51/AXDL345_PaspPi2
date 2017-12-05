@@ -7,7 +7,7 @@ http://www.raspberrypi.org/forums/viewtopic.php?t=55834
 Updated by Jan Balewski, August 2014
 */
 
-#include <assert>
+#include <assert.h>
 #include "ADXL345.h"
 
 //==========================================

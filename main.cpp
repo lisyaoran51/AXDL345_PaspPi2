@@ -35,15 +35,15 @@ k=  4  acceleration (a.u.)  mag=272.8    ax,ay,az=-42, 17, -269
 */
 
 
-#include <stdio>
-#include <stdlib>
+#include <stdio.h>
+#include <stdlib.h>
 #include <linux/i2c-dev>
-#include <fcntl>
+#include <fcntl.h>
 #include <string>
-#include <sys/ioctl>
-#include <sys/types>
-#include <sys/stat>
-#include <unistd>
+#include <sys/ioctl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <iostream>
 #include <cmath>
 #include "ADXL345.h"
